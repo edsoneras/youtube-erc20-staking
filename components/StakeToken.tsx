@@ -92,7 +92,7 @@ export const StakeToken = () => {
                                 padding: "10px",
                                 borderRadius: "5px",
                                 marginRight: "5px",
-                            }}>Staking Token: {truncate(toEther(stakingTokenBalance!),2)}</p>
+                            }}>Staking Token: {stakingTokenBalance? truncate(toEther(stakingTokenBalance),2) : 'Loading...'}</p>
                         )}
                         {loadingRewardTokenBalance ? (
                             <p>Loading...</p>
@@ -100,7 +100,7 @@ export const StakeToken = () => {
                             <p style={{
                                 padding: "10px",
                                 borderRadius: "5px",
-                            }}>Reward Token: {truncate(toEther(rewardTokenBalance!),2)}</p>
+                            }}>Reward Token: {rewardTokenBalance? truncate(toEther(rewardTokenBalance),2): 'Loading...' }</p>
                         )}
                     </div>
                     
